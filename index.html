@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>Calculator</h1>
+    </div>
+
+    <div class="container">
+      <!-- ROW ONE - DAYS BETWEEN DATES -->
+      <div class="group_container">
+        <div class="input_container">
+          <label for="date_a">Date A</label>
+          <input type="date" class="date1_input input_style-1" value="2024-11-30" id="date_a" />
+        </div>
+        <div class="input_container">
+          <label for="date_b">Date B</label>
+          <input type="date" class="date2_input input_style-1" value="2025-03-31" id="date_b" />
+        </div>
+        <div class="input_container">
+          <label for="balance">Daily Charge</label>
+          <input type="number" class="balance_input input_style-1 input_style-num" id="balance" />
+        </div>
+
+        <input type="button" class="submit_btn submit_date" value="Calc Charges" />
+      </div>
+
+      <!-- ROW TWO - METER READS -->
+      <div class="group_container">
+        <div class="input_container">
+          <label for="read_a">Meter Read A</label>
+          <input type="number" class="read1_input input_style-1" placeholder="00000" id="read_a" />
+        </div>
+        <div class="input_container">
+          <label for="read_b">Meter Read B</label>
+          <input type="number" class="read2_input input_style-1" placeholder="00000" id="read_b" />
+        </div>
+        <input type="button" class="submit_btn submit_read" value="Calc ADU" />
+      </div>
+
+      <!-- ROW 3 - ABOVE DATA DISPLAY -->
+      <h2 class="accrued_days">0 days</h2>
+      <h2 class="charges">Charge for date period:</h2>
+      <h2 class="adu">Average daily usage:</h2>
+
+      <!-- ROW 4 - CALC ANNUAL EST CHARGE-->
+      <h2 class="annual_charge_calc_title">Annual Charge Calculator</h2>
+      <div class="group_container">
+        <div class="input_container">
+          <label for="adu_input">ADU</label>
+          <input
+            type="number"
+            class="adu_input input_style-1 input_style-num"
+            placeholder="0.000"
+            id="adu_input"
+          />
+        </div>
+        <div class="input_container">
+          <label for="services">Services</label>
+          <select name="services" class="input_style-1" id="services">
+            <option value="full">Full</option>
+            <option value="fresh_only">Fresh Only</option>
+            <option value="waste_only">Waste Only</option>
+          </select>
+        </div>
+        <div class="input_container">
+          <label for="swd">Surface Water Drainage (SWD)</label>
+          <select name="swd" class="input_style-1" id="swd">
+            <option value="flat_terrace">Flat / Terrace</option>
+            <option value="semi_detatched">Semi-Detatched</option>
+            <option value="detatched">Detatched</option>
+            <option value="no_swd">No SWD</option>
+          </select>
+        </div>
+        <div class="input_container">
+          <label for="hwd">Highway Drainage (HWD)</label>
+          <select name="hwd" class="input_style-1" id="hwd">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <input type="button" class="submit_btn submit_annual_charge" value="Calc Annual Charge" />
+      </div>
+      <h2 class="annual_charge">Estimated annual charge:</h2>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
